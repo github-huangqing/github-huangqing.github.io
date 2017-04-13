@@ -1,5 +1,15 @@
 # Raphael（拉斐尔）
 
++ [raphael](http://dmitrybaranovskiy.github.io/raphael/)
++ [raphael reference](http://dmitrybaranovskiy.github.io/raphael/reference.html)
++ [raphael github](https://github.com/DmitryBaranovskiy/raphael)
+
+## 参考
+
++ [timeline](https://github.com/huang-qing/timeline)
++ [topology-diagram](https://github.com/huang-qing/topology-diagram)
+
+
 ## 画箭头 
 
 `Element.attr(…)`方法的`arrow-end`参数：
@@ -47,5 +57,7 @@ Raphael为箭头的`marker-end`属性设置了一个引用地址`url(#raphael-ma
 解决方案：
 + Raphael 2.2.0 已修复这个问题
 + 之前的版本调整 addArrow 方法
+
+
 
 
