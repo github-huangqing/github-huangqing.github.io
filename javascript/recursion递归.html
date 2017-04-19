@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>recursion</title>
+
+    <script>
+        data = [{
+            name: "XXX1",
+            children: [{
+                name: "XXX1-XXX1",
+                children: [{
+                    name: "XXX1-XXX1-XXX1"
+                }]
+            }]
+        }, {
+            name: "XXX2",
+            children: []
+        }];
+
+        function recursion(data) {
+            var d = data,
+                item,
+                children;
+
+            if (d && d instanceof Array && d.length > 0) {
+                for (var i = 0, len = d.length; i < len; i++) {
+
+                    item = d[i];
+                    if (item) {
+                        item.name = item.name.replace(/XXX/g, 'HHH');
+                    }
+
+                    console.dir(d[i]);
+
+                    children = item.children;
+
+                    if (children && children instanceof Array && children.length > 0) {
+                        recursion(children);
+                    }
+                }
+            }
+        }
+
+        console.dir(data);
+        recursion(data);
+        console.dir(data);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
